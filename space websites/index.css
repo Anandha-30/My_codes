@@ -1,0 +1,138 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #000;
+  color: #fff;
+  overflow: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+header {
+  text-align: center;
+  padding: 2rem;
+  background: #111;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+}
+
+header h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+header p {
+  font-size: 1.2rem;
+}
+
+.solar-system {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+  perspective: 1500px;
+}
+
+.sun {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: yellow;
+  border-radius: 50%;
+  animation: spin 60s linear infinite;
+  box-shadow: 0 0 30px yellow;
+}
+
+.planet {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.mercury {
+  width: 20px;
+  height: 20px;
+  background: gray;
+  top: 30%;
+  left: 45%;
+}
+
+.venus {
+  width: 35px;
+  height: 35px;
+  background: #d6ad3b;
+  top: 45%;
+  left: 45%;
+}
+
+.earth {
+  width: 40px;
+  height: 40px;
+  background: #3a85d7;
+  top: 55%;
+  left: 45%;
+}
+
+.mars {
+  width: 30px;
+  height: 30px;
+  background: #ff3d3d;
+  top: 65%;
+  left: 45%;
+}
+
+.jupiter {
+  width: 80px;
+  height: 80px;
+  background: #f1a35d;
+  top: 80%;
+  left: 45%;
+}
+
+.saturn {
+  width: 70px;
+  height: 70px;
+  background: #d8d8d8;
+  top: 95%;
+  left: 45%;
+}
+
+.uranus {
+  width: 60px;
+  height: 60px;
+  background: #75c7e2;
+  top: 110%;
+  left: 45%;
+}
+
+.neptune {
+  width: 50px;
+  height: 50px;
+  background: #6e99bb;
+  top: 125%;
+  left: 45%;
+}
+
+@keyframes orbit {
+  0% {
+    transform: rotate(0deg) translateX(150px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(150px) rotate(-360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
